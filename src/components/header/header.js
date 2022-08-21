@@ -18,10 +18,8 @@ const Header = () => {
                     <li className={estilos.lista}>
                         <a href ="#" className={estilos.links}>Contact</a>
                     </li>
-                    <li className={estilos.lista}>
-                        <a href ="#" className={estilos.links}><img className={estilos.carrito} src={require('./cart.png')}/></a>
-                    </li>
                 </ul>
+                <a href ="#" className={estilos.links}><img className={estilos.carrito} src={require('./cart.png')}/></a>
             </nav>
         </header>
 
