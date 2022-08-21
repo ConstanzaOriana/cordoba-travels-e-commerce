@@ -1,0 +1,8 @@
+.footer{
+    width: 90%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    color: rgb(13, 76, 143);
+}

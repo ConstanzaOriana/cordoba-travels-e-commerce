@@ -1,0 +1,7 @@
+.mainContainer{
+    width: 90%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    color: rgb(27, 139, 101);
+}

@@ -1,0 +1,22 @@
+.chau{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.lista{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    padding: 2%;
+}
+
+.links{
+    color: rgb(30, 108, 29);
+    text-decoration: none;
+}
+
+.links:hover{
+    font-weight: 700;
+    color: rgb(9, 74, 33);
+}
