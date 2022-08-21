@@ -3,6 +3,7 @@
     padding: 3%;
     display: flex;
     justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: small;
     color: rgb(13, 76, 143);
 }

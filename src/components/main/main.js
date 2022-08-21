@@ -1,5 +1,5 @@
 import React from "react";
-import estilos from './main.module.css'
+import estilos from './main.module.css';
 
 
 const Main = () => {

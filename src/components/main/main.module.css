@@ -1,14 +1,17 @@
 .mainContainer{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 90%;
-    padding: 3%;
+    margin: auto;
+    padding: 1%;
     display: flex;
     justify-content: center;
     color: rgb(27, 139, 101);
 }
 
 .secondContainer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 90%;
-    padding: 3%;
+    margin: auto;
     display: flex;
     justify-content: center;
     color: rgb(13, 86, 62);
