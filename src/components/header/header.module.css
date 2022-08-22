@@ -2,24 +2,26 @@
     width: 80%;
     display: inline-flex;
     margin: auto;
+    overflow-x: hidden;
 }
 
 .lista{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     justify-content: flex-start;
-    font-weight: 500;
+    font-weight: 800;
     font-size: larger;
     padding: 2%;
 }
 
 .links{
-    color: rgb(30, 108, 29);
+    color: rgb(41, 139, 39);
     text-decoration: none;
 }
 
 .links:hover{
     color: rgb(9, 74, 33);
+    transition: 0.5s;
 }
 
 .carrito{

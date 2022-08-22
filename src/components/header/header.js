@@ -19,7 +19,7 @@ const Header = () => {
                         <a href ="#" className={estilos.links}>Contact</a>
                     </li>
                 </ul>
-                <a href ="#" className={estilos.links}><img className={estilos.carrito} src={require('./cart.png')}/></a>
+                <a href ="#" className={estilos.links}><img className={estilos.carrito} src={require('./cart.webp')}/></a>
             </nav>
         </header>
 

@@ -1,9 +1,10 @@
 .footer{
-    width: 90%;
+    width: 100%;
     padding: 3%;
     display: flex;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: small;
-    color: rgb(13, 76, 143);
+    color: rgb(56, 60, 65);
+    overflow-x: hidden;
 }

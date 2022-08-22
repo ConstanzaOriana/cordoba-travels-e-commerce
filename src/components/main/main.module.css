@@ -1,18 +1,38 @@
+.main{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.video{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin-right: 10%;
+}
+
 .mainContainer{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 90%;
     margin: auto;
+    margin-top: 15%;
     padding: 3%;
     display: flex;
     justify-content: center;
-    color: rgb(27, 139, 101);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1;
 }
 
 .secondContainer{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 90%;
     margin: auto;
+    margin-top: 25%;
     display: flex;
     justify-content: center;
-    color: rgb(13, 86, 62);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1;
 }
