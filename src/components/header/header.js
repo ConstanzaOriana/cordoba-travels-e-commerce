@@ -1,7 +1,8 @@
 import React from "react";
-import estilos from './header.module.css'
+import estilos from './header.module.css';
+import CartWidget from "./CartWidget";
 
-const Header = () => {
+const Navbar = () => {
     return (
         <header>
             <nav>
@@ -19,11 +20,11 @@ const Header = () => {
                         <a href ="#" className={estilos.links}>Contact</a>
                     </li>
                 </ul>
-                <a href ="#" className={estilos.links}><img className={estilos.carrito} src={require('./cart.webp')}/></a>
+                <CartWidget/>
             </nav>
         </header>
 
     )
 }
 
-export default Header;
+export default Navbar;

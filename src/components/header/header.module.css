@@ -24,9 +24,3 @@
     transition: 0.5s;
 }
 
-.carrito{
-    height: 50px;
-}
-.carrito:hover{
-    cursor: pointer;
-}
