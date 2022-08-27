@@ -1,18 +1,20 @@
 import Navbar from './components/header/header';
 import Footer from './components/footer/footer';
-import Main from './components/main/main';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Layout from './components/Layout';
+import Counter from './components/Counter/Counter';
 
 const App = () =>{
-    return (
+        return (
     <>
     <Layout>
         <Navbar/>
-        <Main/>
+        <ItemListContainer/>
+        <Counter/>
         <Footer />
     </Layout>
     </>
     );
-    };
 
+    }
  export default App;

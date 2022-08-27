@@ -1,8 +1,8 @@
 import React from "react";
-import estilos from './main.module.css';
+import estilos from './item.module.css';
 
 
-const Main = () => {
+const ItemListContainer = () => {
     return (
        <main className="main">
         <h1 className={estilos.mainContainer}>Welcome to Córdoba, travelers!</h1>
@@ -12,4 +12,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default ItemListContainer;
