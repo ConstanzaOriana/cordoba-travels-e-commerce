@@ -5,11 +5,14 @@ import Layout from './components/Layout';
 import Counter from './components/Counter/Counter';
 
 const App = () =>{
-        return (
+    
+    const saludo = "Welcome, Cordoba travelers!"
+
+    return (
     <>
     <Layout>
         <Navbar/>
-        <ItemListContainer/>
+        <ItemListContainer saludo={saludo}/>
         <Counter/>
         <Footer />
     </Layout>
