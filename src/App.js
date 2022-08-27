@@ -5,8 +5,8 @@ import Layout from './components/Layout';
 import Counter from './components/Counter/Counter';
 
 const App = () =>{
-    
-    const saludo = "Welcome, Cordoba travelers!"
+
+    const saludo = "Welcome, Cordoba travelers!";
 
     return (
     <>
