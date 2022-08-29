@@ -6,7 +6,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     
       const sumar = () => {
         if(count < stock){
-        setCount(initial + 1)
+        setCount(count + 1);
         console.log(onAdd);
       } else {
         alert("Can't add more packages!")

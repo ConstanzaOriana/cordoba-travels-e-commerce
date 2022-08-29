@@ -8,16 +8,12 @@ const App = () =>{
 
     const saludo = "Welcome, Cordoba travelers!";
 
-    const onAdd = () => {
-        console.log("Producto agregado");
-    }
-
     return (
     <>
     <Layout>
         <Navbar/>
         <ItemListContainer saludo={saludo}/>
-        <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+        <ItemCount stock={10} initial={0} onAdd={console.log("Producto agregado")}/>
         <Footer />
     </Layout>
     </>
