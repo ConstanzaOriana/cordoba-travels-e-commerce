@@ -6,14 +6,18 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 const App = () =>{
 
-    const saludo = "Welcome, Cordoba travelers!";
+    const saludo = "Welcome, Cordoba enthusiasts!";
+
+    const onAdd = () =>{
+        console.log("Producto agregado");
+    }
 
     return (
     <>
     <Layout>
         <Navbar/>
         <ItemListContainer saludo={saludo}/>
-        <ItemCount stock={10} initial={0} onAdd={console.log("Producto agregado")}/>
+        <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         <Footer />
     </Layout>
     </>

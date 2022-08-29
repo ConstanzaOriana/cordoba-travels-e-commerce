@@ -1,0 +1,28 @@
+.contador{
+    font-size: x-large;
+}
+
+.suma, .resta{
+    display: inline-flex;
+    justify-content: center;
+    margin: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(72, 132, 11);
+    color: black;
+}
+
+.numero{
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
+    color: rgb(52, 92, 11);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.texto{
+    display: inline-block;
+    margin-top: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(62, 99, 26);
+    color: rgb(0, 0, 0);
+}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import estilos from './itemcounter.module.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
     
       const sumar = () => {
         if(count < stock){
@@ -18,11 +19,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
       };
 
   return (
-    <div>
-    <button onClick={sumar} className="suma">+</button>
-    <button onClick={restar} className="resta">-</button>
-    <p className='Numero'>{count}</p>
-    <button className='Agregado'>Agregar al carrito</button>
+    <div className={estilos.contador}>
+    <button onClick={sumar} className={estilos.suma}>+</button>
+    <p className={estilos.numero}>{count}</p>
+    <button onClick={restar} className={estilos.resta}>-</button>
+    <button className={estilos.texto}>Agregar al carrito</button>
     </div>
   )
 }
