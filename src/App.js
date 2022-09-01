@@ -2,7 +2,9 @@ import Navbar from './components/header/header';
 import Footer from './components/footer/footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Layout from './components/Layout';
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemList from './components/ItemList/ItemList';
+import Card from './components/Card/Card';
+
 
 const App = () =>{
 
@@ -16,8 +18,7 @@ const App = () =>{
     <>
     <Layout>
         <Navbar/>
-        <ItemListContainer saludo={saludo}/>
-        <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+        <ItemListContainer saludo={saludo} onAdd = {onAdd}/>
         <Footer />
     </Layout>
     </>

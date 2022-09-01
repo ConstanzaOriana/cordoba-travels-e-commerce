@@ -31,5 +31,5 @@ export const products = [
         stock: 10,
         category: 'travel packages',
         img: 'ciudad.jpg',
-    },
-];
+    }
+]

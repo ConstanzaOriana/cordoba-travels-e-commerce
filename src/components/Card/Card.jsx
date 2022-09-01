@@ -1,5 +1,5 @@
 import React from "react";
-import {ItemCount} from 'src\components\ItemCount\ItemCount.jsx';
+import ItemCount from "../ItemCount/ItemCount";
 
 const Card = ({
     title = "Hola",

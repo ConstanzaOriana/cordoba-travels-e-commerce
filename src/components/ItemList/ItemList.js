@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'src\components\Card\Card.jsx';
+import Card from '../Card/Card';
 
 const ItemList = ({productList}) => {
 
