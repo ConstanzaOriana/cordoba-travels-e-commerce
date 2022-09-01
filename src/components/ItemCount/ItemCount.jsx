@@ -3,7 +3,7 @@ import estilos from './itemcounter.module.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(initial);
     
       const sumar = () => {
         if(count < stock){
@@ -18,7 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         setCount(count - 1);
       };
 
-  return (
+     return (
     <div className={estilos.contador}>
     <button onClick={sumar} className={estilos.suma}>+</button>
     <p className={estilos.numero}>{count}</p>

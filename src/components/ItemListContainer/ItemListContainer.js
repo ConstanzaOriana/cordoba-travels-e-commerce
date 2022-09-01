@@ -1,15 +1,25 @@
-import React from "react";
-import estilos from './item.module.css';
+import React, { useEffect, useState } from "react";
+import { products } from '../Item/Item';
+import ItemList from "../ItemList/ItemList";
 
 
-const ItemListContainer = (props) => {
-    return(
-        <main className="main">
-        <h1 className={estilos.mainContainer}>{props.saludo}</h1>
-        <h2 className={estilos.secondContainer}>Get to know the most beautiful places of our province</h2>
-        <video className="video" src={require("./video.mp4")} muted autoPlay loop></video>
-       </main>
-    )
+const ItemListContainer = ( ) => {
+    const [productList, setProductList] = useState([])
+        const getProducts = () => new Promise((resolve, reject) => {
+            setTimeout(() =>resolve(products), 2000)
+        })
+
+useEffect(() => {
+getProducts()
+.then(products => setProductList(products))
+.catch(error => console.error(error))
+}, [])
+
+        return(
+            
+            <ItemList productList={productList}/>
+            
+        )
 }
-
+    
 export default ItemListContainer;
