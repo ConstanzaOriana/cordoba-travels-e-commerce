@@ -1,21 +1,22 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import estilos from './card.module.css'
 
 const Card = ({
-    title = "Hola",
+    title = "La cumbrecita",
     img = "lacumbrecita.jpg",
     price = 600,
     stock = 10
 }) => {
     return (
-        <div className="card-container">
+        <div className={estilos.cardContainer}>
             <h4>{title}</h4>
-            <div>
-            <img className="img" src={img} alt={`Imagen del producto ${title}`}/>
+            <div className={estilos.card}>
+            <img className={estilos.img} src={img} alt={`Imagen del producto ${title}`}/>
             </div>
-            <p className="price">{price}</p>
+            <p className={estilos.price}>{price}</p>
            <p>Stock: {stock}</p>
-           <ItemCount stock={10}/>
+           <ItemCount className={estilos.counter}/>
         </div>
     )
 }

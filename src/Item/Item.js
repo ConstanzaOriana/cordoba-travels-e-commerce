@@ -1,35 +1,35 @@
 export const products = [
     {
         id: 1,
-        title: 'San Clemente',
+        title: 'Chasing waterfalls in San Clemente',
         price: 12000,
         stock: 10,
         category: 'travel packages',        
-        img: 'sanclemente.jpg',
+        img: 'sanclemente.webp',
         
     },
     {
         id: 2,
-        title: 'La Cumbrecita',
+        title: 'EcoTour La Cumbrecita',
         price: 15000,
         stock: 10,
         category: 'travel packages',
-        img: 'lacumbrecita.jpg',
+        img: 'lacumbrecita.webp',
     },
     {
         id: 3,
-        title: 'Los Gigantes',
+        title: 'Trekking at Los Gigantes',
         price: 10000,
         stock: 10,
         category: 'travel packages',
-        img: 'losgigantes.jpg',
+        img: 'losgigantes.webp',
     },
     {
         id: 4,
-        title: 'Ciudad de Cordoba',
-        price: 8000,
+        title: 'Cordoba city - Bike tour',
+        price: 7500,
         stock: 10,
         category: 'travel packages',
-        img: 'ciudad.jpg',
+        img: 'ciudad.webp',
     }
 ]

@@ -16,9 +16,9 @@ getProducts()
 }, [])
 
         return(
-            
+            <div>
             <ItemList productList={productList}/>
-            
+            </div>
         )
 }
     
