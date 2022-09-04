@@ -1,20 +1,46 @@
 .cardContainer, .counter{
+    width: 80%;
+    display: inline-flex;
+    justify-content: center;
+    margin: 1.5%;
+    margin-top: 10%;
+    border: 2px solid rgb(2, 63, 29);
+    background-color: rgb(102, 152, 96);
+    padding: 1%;
+}
+
+.title{
+    width: 100%;
+    font-size: x-large;
+    margin: 2%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+justify-content: center;
+}
+
+.card{
     width: 30%;
     display: inline-flex;
     justify-content: space-evenly;
-    margin: 1.5%;
-    border: 2px solid rgb(2, 63, 29);
-    padding: 4%;
 }
 
-
 .cardContainer:hover{
-    background-color: rgb(128, 208, 182);
-    transition: 1s;
+    background-color:  rgb(158, 210, 151);
+    transition: 1.5s;
 }
 
 .img{
     width: 100%;
-   position: cover;
+}
+
+.price{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 2%;
+font-size: x-large;
+}
+
+.stock{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 2%;
+    font-size: x-large;
 }
 

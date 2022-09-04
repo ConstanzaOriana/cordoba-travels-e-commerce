@@ -1,5 +1,6 @@
 html{
     overflow-x: hidden;
-    width: 90%;
+    width: 80%;
+    justify-content: center;
     margin: auto;
 }

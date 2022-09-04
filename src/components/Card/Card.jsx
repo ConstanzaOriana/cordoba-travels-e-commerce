@@ -10,13 +10,13 @@ const Card = ({
 }) => {
     return (
         <div className={estilos.cardContainer}>
-            <h4>{title}</h4>
+            <h4 className={estilos.title}>{title}</h4>
             <div className={estilos.card}>
             <img className={estilos.img} src={img} alt={`Imagen del producto ${title}`}/>
             </div>
-            <p className={estilos.price}>{price}</p>
-           <p>Stock: {stock}</p>
-           <ItemCount className={estilos.counter}/>
+            <p className={estilos.price}>Price: {price}</p>
+           <p className={estilos.stock}>Stock: {stock}</p>
+           <ItemCount className={estilos.counter} stock={10}/>
         </div>
     )
 }
