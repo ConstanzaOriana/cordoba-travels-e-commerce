@@ -6,10 +6,12 @@
 .suma, .resta{
     display: inline-flex;
     justify-content: center;
-    margin: 2%;
+    margin: 8%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(72, 132, 11);
     color: black;
+    font-size: larger;
+    padding: 4%;
 }
 
 .numero{
@@ -26,4 +28,9 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(62, 99, 26);
     color: rgb(0, 0, 0);
+    font-size: large;
+}
+
+.suma, .resta, .texto:hover{
+    cursor: pointer;
 }

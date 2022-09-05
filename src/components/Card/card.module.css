@@ -3,7 +3,7 @@
     display: inline-flex;
     justify-content: center;
     margin: 1.5%;
-    margin-top: 10%;
+    margin-top: 5%;
     border: 2px solid rgb(2, 63, 29);
     background-color: rgb(102, 152, 96);
     padding: 1%;
@@ -18,9 +18,9 @@ justify-content: center;
 }
 
 .card{
-    width: 30%;
+    width: 80%;
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .cardContainer:hover{
