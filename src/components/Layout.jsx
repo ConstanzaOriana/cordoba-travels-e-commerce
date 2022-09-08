@@ -1,8 +1,24 @@
 import React from 'react';
+import ItemListContainer from './ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer'
+import { Route, Routes } from 'react-router-dom';
 
-const Layout = (props) => {
+const Layout = () => {
+
+  const saludo =  "Welcome, Córdoba enthusiasts!";
+
+  const onAdd = () =>{
+      console.log("Producto agregado");
+  }
+
   return (
-    <div>{props.children}</div>
+    
+    <Routes>
+        <Route path='/' element={<ItemListContainer saludo={saludo} onAdd = {onAdd}/>}/>
+
+        <Route path='/' element={<ItemDetailContainer/>}/>
+    
+    </Routes>
   )
 }
 
