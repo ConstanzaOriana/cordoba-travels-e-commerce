@@ -3,7 +3,7 @@ import Footer from './components/footer/footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Layout from './components/Layout';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () =>{
 
@@ -15,12 +15,14 @@ const App = () =>{
 
     return (
     <>
+    <BrowserRouter>
     <Layout>
         <Navbar/>
         <ItemListContainer saludo={saludo} onAdd = {onAdd}/>
         <ItemDetailContainer/>
         <Footer />
     </Layout>
+    </BrowserRouter>
     </>
     );
     }
