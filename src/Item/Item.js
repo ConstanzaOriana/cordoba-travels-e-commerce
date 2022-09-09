@@ -4,7 +4,7 @@ export const products = [
         title: 'Chasing waterfalls in San Clemente',
         price: 12000,
         stock: 10,
-        category: 'travel packages',        
+        category: 'interior',        
         img: 'sanclemente.webp',
         
     },
@@ -13,7 +13,7 @@ export const products = [
         title: 'EcoTour La Cumbrecita',
         price: 15000,
         stock: 10,
-        category: 'travel packages',
+        category: 'interior',
         img: 'lacumbrecita.webp',
     },
     {
@@ -21,7 +21,7 @@ export const products = [
         title: 'Trekking at Los Gigantes',
         price: 10000,
         stock: 10,
-        category: 'travel packages',
+        category: 'interior',
         img: 'losgigantes.webp',
     },
     {
@@ -29,7 +29,7 @@ export const products = [
         title: 'Cordoba city - Bike tour',
         price: 7500,
         stock: 10,
-        category: 'travel packages',
+        category: 'ciudad',
         img: 'ciudad.webp',
     }
 ]

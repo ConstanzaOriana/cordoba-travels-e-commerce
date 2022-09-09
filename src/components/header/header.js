@@ -9,16 +9,16 @@ const Navbar = () => {
             <nav>
                 <ul className={estilos.nav}>
                     <li className={estilos.lista}>
-                        <Link href ="/travel-packages" className={estilos.links}>Travel packages</Link>
+                        <Link href ="/category/travel-packages" className={estilos.links}>Travel packages</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <Link href ="/gallery" className={estilos.links}>Gallery</Link>
+                        <Link href ="/category/gallery" className={estilos.links}>Gallery</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <Link href="/about" className={estilos.links}>About Córdoba</Link>
+                        <Link href="/category/about" className={estilos.links}>About Córdoba</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <Link href="/contact" className={estilos.links}>Contact</Link>
+                        <Link href="/category/contact" className={estilos.links}>Contact</Link>
                     </li>
                 </ul>
                 <Link to="/cart">

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { products } from "../../Item/Item";
+import { useParams } from 'react-router-dom';
 import ItemList from "../ItemList/ItemList";
 import estilos from './item.module.css';
 
+const {categoryName} = useParams();
 
 const ItemListContainer = ( {saludo} ) => {
     const [productList, setProductList] = useState([])
@@ -11,6 +13,15 @@ const ItemListContainer = ( {saludo} ) => {
         })
 
 useEffect(() => {
+    if(categoryName){
+        const getProducts = () => 
+        new Promise ((res, rej) => {
+            const prodFiltrados = products.filter((prod) => prod.category === categoryName)
+            setTimeout(() => {
+                res (prodFiltrados);
+            }, 2000);
+        });
+    }
 getProducts()
 .then(products => setProductList(products))
 .catch(error => console.error(error))
