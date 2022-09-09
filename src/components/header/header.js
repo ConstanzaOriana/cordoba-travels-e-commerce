@@ -1,6 +1,7 @@
 import React from "react";
 import estilos from './header.module.css';
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -8,19 +9,21 @@ const Navbar = () => {
             <nav>
                 <ul className={estilos.nav}>
                     <li className={estilos.lista}>
-                        <a href ="#" className={estilos.links}>Travel packages</a>
+                        <Link href ="/travel-packages" className={estilos.links}>Travel packages</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <a href ="#" className={estilos.links}>Gallery</a>
+                        <Link href ="/gallery" className={estilos.links}>Gallery</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <a href ="#" className={estilos.links}>About Córdoba</a>
+                        <Link href="/about" className={estilos.links}>About Córdoba</Link>
                     </li>
                     <li className={estilos.lista}>
-                        <a href ="#" className={estilos.links}>Contact</a>
+                        <Link href="/contact" className={estilos.links}>Contact</Link>
                     </li>
                 </ul>
-                <CartWidget/>
+                <Link to="/cart">
+                    <CartWidget/>
+                </Link>
             </nav>
         </header>
 
