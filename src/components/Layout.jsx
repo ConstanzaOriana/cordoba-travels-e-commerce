@@ -14,9 +14,9 @@ const Layout = () => {
   return (
     
     <Routes>
-        <Route path='/' element={<ItemListContainer saludo={saludo} onAdd = {onAdd}/>}/>
+        <Route path='/item' element={<ItemListContainer saludo={saludo} onAdd = {onAdd}/>}/>
 
-        <Route path='/' element={<ItemDetailContainer/>}/>
+        <Route path='/detail' element={<ItemDetailContainer/>}/>
     
     </Routes>
   )
