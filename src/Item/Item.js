@@ -5,7 +5,7 @@ export const products = [
         price: 12000,
         stock: 10,
         category: 'interior',        
-        img: 'sanclemente.webp',
+        img: '/sanclemente.webp',
         
     },
     {
@@ -14,7 +14,7 @@ export const products = [
         price: 15000,
         stock: 10,
         category: 'interior',
-        img: 'lacumbrecita.webp',
+        img: '/lacumbrecita.webp',
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ export const products = [
         price: 10000,
         stock: 10,
         category: 'interior',
-        img: 'losgigantes.webp',
+        img: '/losgigantes.webp',
     },
     {
         id: 4,
@@ -30,6 +30,6 @@ export const products = [
         price: 7500,
         stock: 10,
         category: 'ciudad',
-        img: 'ciudad.webp',
+        img: '/ciudad.webp',
     }
 ]
