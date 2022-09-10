@@ -4,18 +4,21 @@ import { products } from "../../Item/Item";
 import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-
-    const {idProd} = useParams();
     const [item, setItem] = useState({});
+
+    const { idProd } = useParams();
 
     useEffect(() => {
         const getProduct = () =>
             new Promise((res, rej) => {
-                const idProd = products.find((idProd) => idProd.id);
+                const prod = products.find(
+                    (prod) => prod.id === Number(idProd)
+                );
                 setTimeout(() => {
-                    res(idProd);
+                    res(prod);
                 }, 500);
             });
+
         getProduct()
             .then((data) => {
                 setItem(data);
@@ -23,8 +26,7 @@ const ItemDetailContainer = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
-
+    }, [idProd]);
     return <ItemDetail item={item} />;
 };
 

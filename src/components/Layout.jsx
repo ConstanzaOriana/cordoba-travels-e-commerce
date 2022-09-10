@@ -16,7 +16,7 @@ const Layout = () => {
     <Routes>
         <Route path='/' element={<ItemListContainer saludo={saludo} onAdd = {onAdd}/>}/>
         <Route path='/category/:categoryName' element={<ItemListContainer/>}/>
-        <Route path='/detail' element={<ItemDetailContainer/>}/>    
+        <Route path='/detail/:idProd' element={<ItemDetailContainer/>}/>    
     </Routes>
   )
 }
