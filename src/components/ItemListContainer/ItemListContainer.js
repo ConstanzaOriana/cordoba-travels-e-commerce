@@ -4,13 +4,14 @@ import { useParams } from 'react-router-dom';
 import ItemList from "../ItemList/ItemList";
 import estilos from './item.module.css';
 
-const {categoryName} = useParams();
 
 const ItemListContainer = ( {saludo} ) => {
     const [productList, setProductList] = useState([])
         const getProducts = () => new Promise((resolve, reject) => {
             setTimeout(() =>resolve(products), 2000)
         })
+
+        const {categoryName} = useParams();
 
 useEffect(() => {
     if(categoryName){

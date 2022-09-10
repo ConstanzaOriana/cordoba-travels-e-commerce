@@ -3,31 +3,20 @@ import estilos from './header.module.css';
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+    if(props.isFooter){
     return (
-        <header>
             <nav>
                 <ul className={estilos.nav}>
-                    <li className={estilos.lista}>
-                        <Link href ="/category/travel-packages" className={estilos.links}>Travel packages</Link>
-                    </li>
-                    <li className={estilos.lista}>
-                        <Link href ="/category/gallery" className={estilos.links}>Gallery</Link>
-                    </li>
-                    <li className={estilos.lista}>
-                        <Link href="/category/about" className={estilos.links}>About Córdoba</Link>
-                    </li>
-                    <li className={estilos.lista}>
-                        <Link href="/category/contact" className={estilos.links}>Contact</Link>
-                    </li>
+                    <Link to ="/category/interior" className={estilos.links}>Travel packages - Interior</Link>
+                    <Link to ="/category/ciudad" className={estilos.links}>Travel packages - Ciudad</Link>
                 </ul>
-                <Link to="/cart">
-                    <CartWidget/>
-                </Link>
+                    <Link to="/cart">
+                        <CartWidget/>
+                    </Link>
             </nav>
-        </header>
-
-    )
+    );
+}
 }
 
 export default Navbar;
