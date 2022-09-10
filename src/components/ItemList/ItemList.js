@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const ItemList = ({productList}) => {
+const ItemList = ({items}) => {
 
   return (
     <div>
         {
-            productList.map(item => <Card key={item.id} img={item.img} title={item.title} stock={item.stock} price={item.price} category={item.category}/>)
+            items.map(item => <Card key={item.id} img={item.img} title={item.title} stock={item.stock} price={item.price} category={item.category}/>)
         }
     </div>
   )
