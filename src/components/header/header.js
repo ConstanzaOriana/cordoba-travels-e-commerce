@@ -1,22 +1,11 @@
-import React from "react";
-import estilos from './header.module.css';
-import CartWidget from "./CartWidget";
-import { Link } from "react-router-dom";
+import Navbar from '../Navbar/navbar';
 
-const Navbar = (props) => {
-    if(props.isFooter){
+const Header = () => {
     return (
-            <nav>
-                <ul className={estilos.nav}>
-                    <Link to ="/category/interior" className={estilos.links}>Travel packages - Interior</Link>
-                    <Link to ="/category/ciudad" className={estilos.links}>Travel packages - Ciudad</Link>
-                </ul>
-                    <Link to="/cart">
-                        <CartWidget/>
-                    </Link>
-            </nav>
+        <header>
+            <Navbar isFooter={true} />
+        </header>
     );
-}
-}
+};
 
-export default Navbar;
+export default Header;

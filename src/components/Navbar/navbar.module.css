@@ -1,13 +1,8 @@
 .nav{
     width: 80%;
-    display: inline-flex;
     margin: auto;
     overflow-x: hidden;
     margin-bottom: 5%;
-}
-
-.lista{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     justify-content: flex-start;
     font-weight: 800;
@@ -16,6 +11,8 @@
 }
 
 .links{
+    display: inline-flex;
+    padding: 2%;
     color: rgb(41, 139, 39);
     text-decoration: none;
 }
@@ -25,7 +22,6 @@
     transition: 0.5s;
 }
 
-.material-symbols-outlined{
+.cart{
     color: blueviolet;
-    background-color: blue;
 }

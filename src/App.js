@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from './components/Layout';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/header/header';
+import Navbar from '../src/components/header/header';
 import Footer from './components/footer/footer';
 
 

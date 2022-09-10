@@ -3,7 +3,6 @@ import ItemListContainer from './ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer'
 import { Route, Routes } from 'react-router-dom';
 
-
 const Layout = () => {
 
   const saludo =  "Welcome, Córdoba enthusiasts!";
@@ -16,8 +15,8 @@ const Layout = () => {
     
     <Routes>
         <Route path='/' element={<ItemListContainer saludo={saludo} onAdd = {onAdd}/>}/>
-        <Route path='/item' element={<ItemListContainer/>}/>
-        <Route path='/category' element={<ItemDetailContainer/>}/>    
+        <Route path='/category/:categoryName' element={<ItemListContainer/>}/>
+        <Route path='/detail' element={<ItemDetailContainer/>}/>    
     </Routes>
   )
 }
