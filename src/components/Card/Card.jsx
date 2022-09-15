@@ -12,15 +12,13 @@ const Card = ({
 }) => {
     return (
         <div className={estilos.cardContainer}>
-            <Link to={`/detail/${id}`}>
             <h4 className={estilos.title}>{title}</h4>
             <div className={estilos.card}>
             <img className={estilos.img} src={img} alt={`Imagen del producto ${title}`}/>
             </div>
             <p className={estilos.price}>Price: {price}</p>
             <p className={estilos.stock}>Stock: {stock}</p>
-            <butt className={estilos.stock}>Ver detalles</butt>
-            </Link>
+            <Link to={`/detail/${id}`}><button className={estilos.stock}>Ver detalles</button></Link>
         </div>
     )
 }
