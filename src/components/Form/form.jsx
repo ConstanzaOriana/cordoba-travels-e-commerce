@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 const Form = () => {
@@ -15,7 +16,18 @@ const Form = () => {
 
     const handleChangeApellido = (event) => {
         setApellido(event.target.value);
-    };    
+    };
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            
+        }
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+    }
+    }, []);
     return (
         <div>
             <form action = "" onSubmit={handleSubmit}>

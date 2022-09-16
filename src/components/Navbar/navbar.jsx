@@ -1,7 +1,7 @@
 import React from "react";
-import CartWidget from "../header/CartWidget";
+import CartWidget from "./CartWidget";
 import { Link, NavLink } from "react-router-dom";
-import estilos from "../Navbar/navbar.module.css"
+import estilos from "../Navbar/navbar.module.css";
 
 const Navbar = (props) => {
     if(props.isFooter){
