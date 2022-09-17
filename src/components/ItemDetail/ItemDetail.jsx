@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-
 const ItemDetail = ({ item }) => {
     const [cantidad, setCantidad] = useState(0);
 
-    const onAdd = (arg) => {
-        setCantidad(arg);
+    const onAdd = (x) => {
+        setCantidad(x);
     };
 
     return (
@@ -23,12 +22,12 @@ const ItemDetail = ({ item }) => {
                 </p>
                 <h3>${item.price}</h3>
                 {cantidad === 0 ? (
-                    <h2>Cantidad es 0</h2>
+                    <h2>You haven't added any packages yet!</h2>
                 ) : (
-                    <h2>Cantidad es {cantidad}</h2>
+                    <h2>You have added {cantidad} packages!</h2>
                 )}
                 <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                <Link to="/cart" className={estilos.cartButton}>Ir al carrito</Link>
+                <Link to="/cart" className={estilos.cartButton}>Go to cart</Link>
             </div>
         </div>
     );

@@ -1,10 +1,10 @@
 export const products = [
     {
         id: 1,
-        title: 'Chasing waterfalls in San Clemente',
+        title: 'Chasing waterfalls in La Falda',
         price: 12000,
         stock: 10,
-        category: 'interior',        
+        category: 'nature',        
         img: '/sanclemente.webp',
         
     },
@@ -13,7 +13,7 @@ export const products = [
         title: 'EcoTour La Cumbrecita',
         price: 15000,
         stock: 10,
-        category: 'interior',
+        category: 'nature',
         img: '/lacumbrecita.webp',
     },
     {
@@ -21,15 +21,31 @@ export const products = [
         title: 'Trekking at Los Gigantes',
         price: 10000,
         stock: 10,
-        category: 'interior',
+        category: 'nature',
         img: '/losgigantes.webp',
     },
     {
         id: 4,
-        title: 'Cordoba city - Bike tour',
+        title: 'Bike tour',
         price: 7500,
         stock: 10,
-        category: 'ciudad',
+        category: 'city',
         img: '/ciudad.webp',
+    },
+    {
+        id: 5,
+        title: 'Inside Cathedrals experience',
+        price: 8500,
+        stock: 10,
+        category: 'city',
+        img: '/catedral.webp',
+    },
+    {
+        id: 6,
+        title: 'Museum Night',
+        price: 9000,
+        stock: 10,
+        category: 'city',
+        img: '/museo.jpg',
     }
 ]

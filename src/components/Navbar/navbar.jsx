@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import estilos from "../Navbar/navbar.module.css";
 
 const Navbar = (props) => {
@@ -9,13 +9,13 @@ const Navbar = (props) => {
             <nav>
                 <ul className={estilos.nav}>
                     <Link to="/" className={estilos.links}>Home</Link>
-                    <Link to ="/category/interior" className={estilos.links}>Travel packages - Interior</Link>
-                    <Link to ="/category/ciudad" className={estilos.links}>Travel packages - Ciudad</Link>
+                    <Link to ="/category/nature" className={estilos.links}>Nature</Link>
+                    <Link to ="/category/city" className={estilos.links}>City</Link>
                     <Link to="/cart"> <CartWidget className={estilos.cart}/></Link>
                 </ul>
             </nav>
     );
-}
-}
+};
+};
 
 export default Navbar;

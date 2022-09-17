@@ -2,9 +2,9 @@ import React from "react";
 
 const CartWidget = () => {
     return(
-        <div>
-<span className="material-symbols-outlined">shopping_cart</span>
-</div>
+        <div style={{ display: 'flex', alignItems: 'right', color: 'darkgreen', marginLeft: '40px'}}>
+            <span className="material-symbols-outlined">shopping_cart</span>
+        </div>
 )
 }
 

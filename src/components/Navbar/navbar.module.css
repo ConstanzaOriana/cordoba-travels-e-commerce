@@ -12,9 +12,9 @@
 
 .links{
     display: inline-flex;
-    padding: 2%;
     color: rgb(41, 139, 39);
     text-decoration: none;
+    margin-left: 50px;
 }
 
 .links:hover{
