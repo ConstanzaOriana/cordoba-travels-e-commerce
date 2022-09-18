@@ -9,14 +9,13 @@ const Layout = () => {
   const saludo =  "Welcome, Córdoba enthusiasts!";
 
   return (
-    
     <Routes>
         <Route path='/' element={<ItemListContainer saludo={saludo}/>}/>
         <Route path='/category/:categoryName' element={<ItemListContainer/>}/>
         <Route path='/detail/:idProd' element={<ItemDetailContainer/>}/>    
         <Route path='/cart' element={<Cart/>}/>
     </Routes>
-  )
-}
+  );
+};
 
 export default Layout;

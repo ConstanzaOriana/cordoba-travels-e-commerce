@@ -1,0 +1,51 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-left: 400px;
+}
+
+.name, .lastName{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    background-color: rgb(130, 218, 221);
+    padding: 3%;
+    margin-top: 2%;
+    border: none;
+}
+
+.name, .lastName:hover{
+    border: 2px solid rgb(15, 52, 57);
+    transition: 0.5s;
+}
+
+.p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.select{
+    padding: 2%;
+    margin-bottom: 5%;
+}
+
+.button{
+    width: 25%;
+    border: none;
+    background-color: cadetblue;
+    padding: 5%;
+    color: black;
+    margin-left: 140px;
+    margin-top: 50px;
+}
+
+.button:hover{
+    background-color: rgb(47, 102, 104);
+    color: aliceblue;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid rgb(10, 49, 81);
+}

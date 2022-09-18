@@ -1,7 +1,7 @@
 export const products = [
     {
         id: 1,
-        title: 'Chasing waterfalls in La Falda',
+        title: 'Chasing waterfalls in Sierras Grandes',
         price: 12000,
         stock: 10,
         category: 'nature',        

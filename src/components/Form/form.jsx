@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import estilos from "./form.module.css";
 
 const Form = () => {
     const [nombre, setNombre] = useState('');
@@ -34,15 +35,16 @@ const Form = () => {
     }, []);
     return (
         <div>
-            <form action = "" onSubmit={handleSubmit}>
-                <input type = "text" placeholder="Nombre..." name="nombre" value={nombre} onChange={handleChangeNombre}/>
-                <input type = "text" placeholder="Apellido..." value={apellido} onChange={handleChangeApellido}/>
-                <select value={days} onChange={handleChangeDays}>
+            <form action = "" onSubmit={handleSubmit} className={estilos.form}>
+                <input type = "text" placeholder="Your name" name="nombre" value={nombre} onChange={handleChangeNombre} className={estilos.name}/>
+                <input type = "text" placeholder="Lastname" value={apellido} onChange={handleChangeApellido} className={estilos.lastName}/>
+                <p className={estilos.p}>Select the number of days you stay in Cordoba so we may offer you an experience to remember!</p>
+                <select value={days} onChange={handleChangeDays} className={estilos.select}>
                     <option value="One">One day</option>
                     <option value="Two">Two days</option>
                     <option value="Three">Three days</option>
                 </select>
-                <button>Submit</button>
+                <button className={estilos.button}>Submit</button>
             </form>
         </div>
     );

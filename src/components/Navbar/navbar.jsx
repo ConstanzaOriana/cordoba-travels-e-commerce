@@ -9,8 +9,8 @@ const Navbar = (props) => {
             <nav>
                 <ul className={estilos.nav}>
                     <Link to="/" className={estilos.links}>Home</Link>
-                    <Link to ="/category/nature" className={estilos.links}>Nature</Link>
-                    <Link to ="/category/city" className={estilos.links}>City</Link>
+                    <Link to ="/category/nature" className={estilos.links}>Enjoy the Nature</Link>
+                    <Link to ="/category/city" className={estilos.links}>Meeting the City</Link>
                     <Link to="/cart"> <CartWidget className={estilos.cart}/></Link>
                 </ul>
             </nav>

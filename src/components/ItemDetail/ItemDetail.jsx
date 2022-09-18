@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import estilos from './itemdetail.module.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ item }) => {
     const [cantidad, setCantidad] = useState(0);
+    const {addToCart} = useContext(CartContext);
 
     const onAdd = (x) => {
         setCantidad(x);
+        addToCart();
     };
 
     return (
@@ -22,12 +24,11 @@ const ItemDetail = ({ item }) => {
                 </p>
                 <h3>${item.price}</h3>
                 {cantidad === 0 ? (
-                    <h2>You haven't added any packages yet!</h2>
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 ) : (
-                    <h2>You have added {cantidad} packages!</h2>
+                    <Link to="/cart" className={estilos.cartButton}>Go to cart</Link>
                 )}
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                <Link to="/cart" className={estilos.cartButton}>Go to cart</Link>
+            
             </div>
         </div>
     );
