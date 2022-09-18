@@ -7,10 +7,14 @@ const ItemCount = ({stock, initial =1, onAdd}) => {
     
       const addCounter = () => {
         count < stock && setCount(count + 1)
-      }
+      };
 
       const sustractCounter = () => {
         count > initial && setCount(count - 1)
+      };
+
+      const agregarAlCarrito = () => {
+        onAdd(count);
       }
 
      return (
@@ -18,7 +22,7 @@ const ItemCount = ({stock, initial =1, onAdd}) => {
     <button onClick={addCounter} className={estilos.suma}>+</button>
     <p className={estilos.numero}>{count}</p>
     <button onClick={sustractCounter} className={estilos.resta}>-</button>
-    <button onClick= {() => onAdd(count)} className={estilos.texto}>Add to cart!</button>
+    <button onClick= {agregarAlCarrito} className={estilos.texto}>Add to cart!</button>
     </div>
   )
 }

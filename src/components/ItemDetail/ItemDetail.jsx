@@ -9,9 +9,9 @@ const ItemDetail = ({ item }) => {
     const [cantidad, setCantidad] = useState(0);
     const {addToCart} = useContext(CartContext);
 
-    const onAdd = (x) => {
-        setCantidad(x);
-        addToCart();
+    const onAdd = (cantidadItem) => {
+        setCantidad(cantidadItem);
+        addToCart(item, cantidadItem);
     };
 
     return (
