@@ -7,6 +7,7 @@ import estilos from './item.module.css';
 
 const ItemListContainer = ({ saludo }) => {
     const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const { categoryName } = useParams();
 
@@ -18,16 +19,21 @@ const ItemListContainer = ({ saludo }) => {
                 );
                 setTimeout(() => {
                     res(categoryName ? prodFiltrados : products);
-                }, 500);
+                }, 2000);
             });
 
         getProducts()
             .then((data) => {
                 setItems(data);
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.log(error);
             });
+
+        return () => {
+            setIsLoading(true);
+        } 
     }, [categoryName]);
 
     return (
@@ -35,7 +41,8 @@ const ItemListContainer = ({ saludo }) => {
             <div className="main-container">
                 <h1 className={estilos.saludo}>{saludo}</h1>
                 <video className="video" src={require("./video.mp4")} muted autoPlay loop></video>
-            <ItemList items={items}/>
+            <div>{isLoading ? (<h2>Loading...</h2>) : (<ItemList items={items}/>)}
+            </div>
             </div>
         </div>
     );

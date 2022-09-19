@@ -7,4 +7,24 @@
     margin-bottom: 20%;
     padding: 20%;
     background-image: url(/public/start.jpg);
+    
+}
+
+.delete{
+    width: 10%;
+    border: none;
+    padding: 2%;
+    display: flex;
+    margin-left: 45%;
+    margin-top: 5%;
+    background-color: blanchedalmond;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.delete:hover{
+    background-color: cadetblue;
+    cursor: pointer;
+    transition:0.5s;
 }

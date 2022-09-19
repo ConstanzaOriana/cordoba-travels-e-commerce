@@ -26,22 +26,25 @@ const Cart = () => {
                 <div
                     key={prod.id}
                     style={{
-                        border: '1px solid black',
+                        border: '1px solid green',
                         borderRadius: '8px',
                         display: 'flex',
                         justifyContent: 'space-around',
                         padding: '8px',
                         margin: '8px',
+                        backgroundColor: 'darkgreen',
+                        color: 'white',
+                        fontFamily: 'Cambria, Cochin, Georgia, Times, serif',
                     }}
                 >
                     <h3>{prod.title}</h3>
                     <h3>Quantity: {prod.cantidad}</h3>
-                    <h3>Price${prod.price}.-</h3>
+                    <h3>Price ${prod.price}</h3>
+                    <h4>Total: ${total}</h4>
                     <button onClick={() => deleteOne(prod.id)}>Delete</button>
                 </div>
             ))}
-            <button onClick={clearCart}>Clear Cart</button>
-            <h4>Total: ${total}</h4>
+            <button onClick={clearCart} className={estilos.delete}>Clear Cart</button>
         </div>
     );
 };
