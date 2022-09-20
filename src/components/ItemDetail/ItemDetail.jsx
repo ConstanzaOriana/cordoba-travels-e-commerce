@@ -7,12 +7,14 @@ import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ item }) => {
     const [cantidad, setCantidad] = useState(0);
-    const {addToCart} = useContext(CartContext);
+    const {addToCart, getProductQuantity} = useContext(CartContext);
 
     const onAdd = (cantidadItem) => {
         setCantidad(cantidadItem);
         addToCart(item, cantidadItem);
     };
+
+    const quantity = getProductQuantity(item.id)
 
     return (
         <div className="detail">
@@ -24,7 +26,7 @@ const ItemDetail = ({ item }) => {
                 </p>
                 <h3>${item.price}</h3>
                 {cantidad === 0 ? (
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    <ItemCount stock={item.stock} initial={quantity} onAdd={onAdd} />
                 ) : (
                     <Link to="/cart" className={estilos.cartButton}>Go to cart</Link>
                 )}

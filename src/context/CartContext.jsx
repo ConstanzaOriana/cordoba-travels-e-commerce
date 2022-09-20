@@ -1,10 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
+    const [unidades, setUnidades] = useState(0);
 
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
@@ -34,7 +36,13 @@ const CartProvider = ({ children }) => {
         setCart(updateProducts);
     };
 
-    const totalQuantity = () => {};
+    const totalQuantity = () => {
+        let acumulador = 0;
+        cart.forEach((prod) => {
+            acumulador += prod.cantidad;
+        });
+        setUnidades(acumulador);
+    };
 
     const totalPrice = () => {
         let acumulador = 0;
@@ -44,7 +52,6 @@ const CartProvider = ({ children }) => {
         return acumulador;
     };
 
-    
     const deleteOne = (id) => {
         const filteredProducts = cart.filter((prod) => prod.id !== id);
         setCart(filteredProducts);
@@ -59,10 +66,15 @@ const CartProvider = ({ children }) => {
         return product?.cantidad;
     };
 
+    useEffect(() => {
+        totalQuantity();
+    }, [cart]);
+
     return (
         <CartContext.Provider
             value={{
                 cart,
+                unidades,
                 addToCart,
                 clearCart,
                 deleteOne,
