@@ -34,7 +34,7 @@ export const products = [
     },
     {
         id: 5,
-        title: 'Inside Cathedrals experience',
+        title: 'Cathedrals experience',
         price: 8500,
         stock: 10,
         category: 'city',
@@ -47,5 +47,29 @@ export const products = [
         stock: 10,
         category: 'city',
         img: '/museo.webp',
-    }
+    },
+    {
+        id: 7,
+        title: 'Brunch Time at Santa Calma',
+        price: 1500,
+        stock: 10,
+        category: 'gastronomy',
+        img: '/santacalma.webp',
+    },
+    {
+        id: 8,
+        title: 'Sweet delight in La Capke',
+        price: 2000,
+        stock: 10,
+        category: 'gastronomy',
+        img: '/merienda.webp',
+    },
+    {
+        id: 9,
+        title: 'Dinner in El Meson',
+        price: 1000,
+        stock: 10,
+        category: 'gastronomy',
+        img: '/elmeson.webp',
+    },
 ]

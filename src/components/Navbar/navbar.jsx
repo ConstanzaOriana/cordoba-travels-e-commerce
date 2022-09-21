@@ -11,6 +11,7 @@ const Navbar = (props) => {
                     <Link to="/" className={estilos.links}>Home</Link>
                     <Link to ="/category/nature" className={estilos.links}>Enjoy the Nature</Link>
                     <Link to ="/category/city" className={estilos.links}>Meeting the City</Link>
+                    <Link to ="/category/gastronomy" className={estilos.links}>Gastronomic Experience</Link>
                     <Link to="/cart"> <CartWidget className={estilos.cart}/></Link>
                 </ul>
             </nav>
