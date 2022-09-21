@@ -46,6 +46,6 @@ export const products = [
         price: 9000,
         stock: 10,
         category: 'city',
-        img: '/museo.jpg',
+        img: '/museo.webp',
     }
 ]
