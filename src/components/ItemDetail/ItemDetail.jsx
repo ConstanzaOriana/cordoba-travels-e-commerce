@@ -17,9 +17,9 @@ const ItemDetail = ({ item }) => {
     const quantity = getProductQuantity(item.id)
 
     return (
-        <div className="detail">
+        <div>
             <img src={item.img} alt={item.title} />
-            <div className="info">
+            <div>
                 <h2>{item.title}</h2>
                 <p className={estilos.description}>
                     Experience one of the most beautiful places in all Cordoba!
