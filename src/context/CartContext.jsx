@@ -68,6 +68,7 @@ const CartProvider = ({ children }) => {
 
     useEffect(() => {
         totalQuantity();
+        // eslint-disable-next-line
     }, [cart]);
 
     return (

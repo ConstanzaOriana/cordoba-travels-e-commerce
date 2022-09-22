@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { products } from "../../Item/Item";
+// import { products } from "../../Item/Item";
 import { useParams } from 'react-router-dom';
+import {collection, getDocs, query, where} from 'firebase/firestore';
+import {db} from '../../firebaseConfig';
 import ItemList from "../ItemList/ItemList";
 import estilos from './item.module.css';
 
@@ -12,28 +14,24 @@ const ItemListContainer = ({ saludo }) => {
     const { categoryName } = useParams();
 
     useEffect(() => {
-        const getProducts = () =>
-            new Promise((res, rej) => {
-                const prodFiltrados = products.filter(
-                    (prod) => prod.category === categoryName
-                );
-                setTimeout(() => {
-                    res(categoryName ? prodFiltrados : products);
-                }, 2000);
-            });
-
-        getProducts()
-            .then((data) => {
-                setItems(data);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-
-        return () => {
-            setIsLoading(true);
-        } 
+        const itemCollection = collection(db, "productos");
+        const q = query(itemCollection, where("category", "==", "nature"));
+        getDocs(q)
+        .then((res) => {
+        const products = res.docs.map((prod) => {
+            return {
+                id:prod.id,
+                ...prod.data()
+            };
+        });
+        setItems(products);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        })
     }, [categoryName]);
 
     return (
@@ -49,3 +47,26 @@ const ItemListContainer = ({ saludo }) => {
 };
     
 export default ItemListContainer;
+
+// const getProducts = () =>
+//             new Promise((res, rej) => {
+//                 const prodFiltrados = products.filter(
+//                     (prod) => prod.category === categoryName
+//                 );
+//                 setTimeout(() => {
+//                     res(categoryName ? prodFiltrados : products);
+//                 }, 2000);
+//             });
+
+//         getProducts()
+//             .then((data) => {
+//                 setItems(data);
+//                 setIsLoading(false);
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+
+//         return () => {
+//             setIsLoading(true);
+//         } 
