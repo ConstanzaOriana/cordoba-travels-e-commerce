@@ -4,10 +4,18 @@
     color: white;
     font-size: 60px;
     margin-top: 5%;
-    margin-bottom: 20%;
-    padding: 20%;
+    padding: 15%;
     background-image: url(/public/end.jpg);
     background-repeat: no-repeat;
+}
+
+.id{
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    color: aliceblue;
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .titleTwo{

@@ -16,7 +16,12 @@ const Cart = () => {
     }
 
     if (idCompra) {
-        return <h1 className={estilos.titleOne}>Thank you for your visit!</h1>;
+        return (
+            <div>
+        <h1 className={estilos.titleOne}>Thank you for your visit!</h1>
+        <p className={estilos.id}> Your tracking number is: {idCompra}</p>
+        </div>
+        )
     }
 
     if (cart.length === 0) {
