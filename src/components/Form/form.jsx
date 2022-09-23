@@ -1,10 +1,4 @@
-import {
-    addDoc,
-    collection,
-    doc,
-    serverTimestamp,
-    updateDoc,
-} from 'firebase/firestore';
+import {addDoc, collection, doc, serverTimestamp, updateDoc,} from 'firebase/firestore';
 import React, { useState } from 'react';
 import { db } from '../../firebaseConfig';
 import estilos from './form.module.css';
@@ -32,12 +26,11 @@ const Form = ({ cart, total, clearCart, handleId }) => {
     };
 
     const updateprod = () => {
-        const orderDoc = doc(db, 'orders', 'A29yVRkpjasoaRfEo3G5');
+        const orderDoc = doc(db, 'orders', '1ZhJcLbZSjWxZdapboFu');
         updateDoc(orderDoc, { total: 100 });
     };
 
     const handleChangeNombre = (event) => {
-        //console.log(event.target.value);
         setNombre(event.target.value);
     };
 
