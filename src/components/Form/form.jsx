@@ -1,18 +1,43 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import estilos from "./form.module.css";
+import {
+    addDoc,
+    collection,
+    doc,
+    serverTimestamp,
+    updateDoc,
+} from 'firebase/firestore';
+import React, { useState } from 'react';
+import { db } from '../../firebaseConfig';
+import estilos from './form.module.css';
 
-const Form = () => {
+const Form = ({ cart, total, clearCart, handleId }) => {
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
-    const [days, setDays] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const order = {
+            buyer: { nombre: nombre, apellido: apellido },
+            items: cart,
+            total: total,
+            date: serverTimestamp(),
+        };
+
+        const ordersCollection = collection(db, 'orders');
+
+        addDoc(ordersCollection, order).then((res) => {
+            handleId(res.id);
+            clearCart();
+            updateprod();
+        });
+    };
+
+    const updateprod = () => {
+        const orderDoc = doc(db, 'orders', 'A29yVRkpjasoaRfEo3G5');
+        updateDoc(orderDoc, { total: 100 });
     };
 
     const handleChangeNombre = (event) => {
+        //console.log(event.target.value);
         setNombre(event.target.value);
     };
 
@@ -20,30 +45,12 @@ const Form = () => {
         setApellido(event.target.value);
     };
 
-    const handleChangeDays = (event) => {
-        setDays(event.target.value);
-};
-
-    useEffect(() => {
-        const handleMouseMove = (e) => {            
-        }
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-    }
-    }, []);
     return (
         <div>
             <form action = "" onSubmit={handleSubmit} className={estilos.form}>
                 <input type = "text" placeholder="Your name" name="nombre" value={nombre} onChange={handleChangeNombre} className={estilos.name}/>
                 <input type = "text" placeholder="Lastname" value={apellido} onChange={handleChangeApellido} className={estilos.lastName}/>
-                <p className={estilos.p}>Select the number of days you stay in Cordoba so we may offer you an experience to remember!</p>
-                <select value={days} onChange={handleChangeDays} className={estilos.select}>
-                    <option value="One">One day</option>
-                    <option value="Two">Two days</option>
-                    <option value="Three">Three days</option>
-                </select>
+                
                 <button className={estilos.button}>Submit</button>
             </form>
         </div>

@@ -1,17 +1,28 @@
 import React from 'react';
-import { useContext } from 'react';
+import { useState,useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import Form from '../Form/form';
 import estilos from './cart.module.css'
-//import Form from '../Form/Form';
+
 
 const Cart = () => {
+    const [idCompra, setIdCompra] = useState('');
     const { cart, clearCart, deleteOne, totalPrice } = useContext(CartContext);
 
     const total = totalPrice();
 
+    const handleId = (id) => {
+        setIdCompra(id);
+    }
+
+    if (idCompra) {
+        return <h1 className={estilos.titleOne}>Thank you for your visit!</h1>;
+    }
+
     if (cart.length === 0) {
-        return <h1 className={estilos.title}>Start your adventure today!</h1>;
+        return <h1 className={estilos.titleTwo}>Start your adventure today!</h1>;
     }; 
+    
 
     return (
         <div
@@ -21,7 +32,6 @@ const Cart = () => {
                 flexDirection: 'column',
             }}
         >
-            {/* <Form /> */}
             {cart.map((prod) => (
                 <div
                     key={prod.id}
@@ -45,6 +55,7 @@ const Cart = () => {
                 </div>
             ))}
             <button onClick={clearCart} className={estilos.delete}>Clear Cart</button>
+        <Form cart={cart} total={total} clearCart={clearCart} handleId={handleId}/>
         </div>
     );
 };

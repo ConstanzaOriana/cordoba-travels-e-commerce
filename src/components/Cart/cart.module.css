@@ -1,4 +1,16 @@
-.title{
+.titleOne{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    padding: 20%;
+    background-image: url(/public/end.jpg);
+    background-repeat: no-repeat;
+}
+
+.titleTwo{
     display: flex;
     justify-content: center;
     color: white;
