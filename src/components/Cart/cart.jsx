@@ -3,6 +3,7 @@ import { useState,useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Form from '../Form/form';
 import estilos from './cart.module.css'
+import CartDetail from './cartdetail';
 
 
 const Cart = () => {
@@ -38,27 +39,9 @@ const Cart = () => {
             }}
         >
             {cart.map((prod) => (
-                <div
-                    key={prod.id}
-                    style={{
-                        border: '1px solid green',
-                        borderRadius: '8px',
-                        display: 'flex',
-                        justifyContent: 'space-around',
-                        padding: '8px',
-                        margin: '8px',
-                        backgroundColor: 'darkgreen',
-                        color: 'white',
-                        fontFamily: 'Cambria, Cochin, Georgia, Times, serif',
-                    }}
-                >
-                    <h3>{prod.title}</h3>
-                    <h3>Quantity: {prod.cantidad}</h3>
-                    <h3>Price ${prod.price}</h3>
-                    <h4>Total: ${total}</h4>
-                    <button onClick={() => deleteOne(prod.id)}>Delete</button>
-                </div>
+            <CartDetail key={prod.id} prod={prod} deleteOne={deleteOne}/>
             ))}
+            <h4 className={estilos.total}>Total: ${total}</h4>
             <button onClick={clearCart} className={estilos.delete}>Clear Cart</button>
         <Form cart={cart} total={total} clearCart={clearCart} handleId={handleId}/>
         </div>

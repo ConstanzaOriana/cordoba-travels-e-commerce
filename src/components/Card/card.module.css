@@ -1,28 +1,23 @@
 .cardContainer, .counter{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    margin: 1.5%;
-    margin-top: 5%;
-    border: 2px solid rgb(2, 63, 29);
-    background-color: rgb(102, 152, 96);
-    padding: 1%;
-}
-
-.card{
+    width: 20%;
+    height: 30em;
     display: inline-flex;
     justify-content: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    border: none;
+    border-radius: 2%;
+    background-color: rgb(102, 152, 96);
+    padding: 4%;
 }
 
 .title{
 width: 100%;
-margin-left: 10%;
-margin-top: 12%;
 font-size: x-large;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 justify-content: center;
-color: darkgreen;
+color: rgb(4, 61, 38);
+text-align: center;
 }
 
 .cardContainer:hover{
@@ -31,23 +26,28 @@ color: darkgreen;
 }
 
 .img{
-    width: 50%;
+    width: 100%;
 }
 
 .price{
+display: flex;
+justify-content: center;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-size: x-large;
-color: darkgreen;
-margin-right: 5%;
+color:rgb(4, 61, 38);
 margin-top: 12%;
 }
 
 .details{
-    margin-top: 250px;
-    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: bisque;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 10%;
     font-size: x-large;
+    border: none;
+    border-radius: 5%;
+    padding: 5%;
 }
 
 .details:hover{

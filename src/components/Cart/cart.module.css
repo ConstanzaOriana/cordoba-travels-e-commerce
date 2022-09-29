@@ -30,7 +30,7 @@
     
 }
 
-.delete{
+.delete, .total{
     width: 10%;
     border: none;
     padding: 2%;
