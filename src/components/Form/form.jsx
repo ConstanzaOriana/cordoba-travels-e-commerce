@@ -39,7 +39,7 @@ const Form = ({ cart, total, clearCart, handleId }) => {
     };
 
     return (
-        <div>
+        <div className={estilos.divContainer}>
             <form action = "" onSubmit={handleSubmit} className={estilos.form}>
                 <input type = "text" placeholder="Your name" name="nombre" value={nombre} onChange={handleChangeNombre} className={estilos.name}/>
                 <input type = "text" placeholder="Lastname" value={apellido} onChange={handleChangeApellido} className={estilos.lastName}/>

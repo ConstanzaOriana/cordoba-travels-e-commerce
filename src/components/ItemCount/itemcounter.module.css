@@ -9,9 +9,11 @@
     margin: 8%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(72, 132, 11);
-    color: black;
+    color: bisque;
     font-size: larger;
     padding: 4%;
+    border: none;
+    border-radius: 5%;
 }
 
 .numero{
@@ -26,9 +28,17 @@
     display: inline-block;
     margin-top: 2%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(62, 99, 26);
-    color: rgb(0, 0, 0);
+    background-color: rgb(95, 143, 47);
+    color: bisque;
     font-size: large;
+    padding: 5%;
+    border: none;
+    border-radius: 5%;
+}
+
+.texto:hover{
+    background-color: rgb(57, 106, 8);
+    transition: 0.5s;
 }
 
 .suma, .resta, .texto:hover{

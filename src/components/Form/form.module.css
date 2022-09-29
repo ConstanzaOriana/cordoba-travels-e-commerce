@@ -1,18 +1,24 @@
+.divContainer{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    margin-left: 400px;
 }
 
 .name, .lastName{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: x-large;
-    background-color: rgb(130, 218, 221);
+    background-color: cadetblue;
     padding: 3%;
     margin-top: 2%;
     border: none;
+    border-radius: 5%;
 }
 
 .name, .lastName:hover{
@@ -33,13 +39,18 @@
 }
 
 .button{
-    width: 25%;
-    border: none;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
     background-color: cadetblue;
     padding: 5%;
     color: black;
-    margin-left: 140px;
-    margin-top: 50px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
 }
 
 .button:hover{
@@ -47,5 +58,4 @@
     color: aliceblue;
     transition: 0.5s;
     cursor: pointer;
-    border: 2px solid rgb(10, 49, 81);
 }

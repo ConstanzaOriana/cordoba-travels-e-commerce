@@ -1,17 +1,53 @@
-.cartButton{
+.divContainer{
+    width: 90%;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.img{
+    display: inline-flex;
+    margin-right: 5%;
+}
+
+.title{
+    width: 100%;
     display: inline-flex;
     justify-content: center;
-    margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(72, 132, 11);
-    color: black;
-    font-size: larger;
-    padding: 2%;
-    border: 2px solid black;
+    color: rgb(22, 117, 43)
+}
+
+.price{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    color: rgb(22, 117, 43);
 }
 
 .description{
+    display: inline-flex;
+    justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 2%;
     font-size: x-large;
+    color: rgb(22, 117, 43)
+}
+
+.cartButton{
+    display: inline-flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(72, 132, 11);
+    color: bisque;
+    font-size: larger;
+    padding: 5%;
+    border: none;
+    border-radius: 5%;
+    text-decoration: none;
+}
+
+.cartButton:hover{
+    background-color: cadetblue;
+    color: azure;
 }

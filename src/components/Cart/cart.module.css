@@ -30,21 +30,39 @@
     
 }
 
-.delete, .total{
-    width: 10%;
+.total{
+    width: 30%;
+    display: inline-flex;
+    justify-content: center;
     border: none;
     padding: 2%;
-    display: flex;
-    margin-left: 45%;
-    margin-top: 5%;
-    background-color: blanchedalmond;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:rgb(30, 182, 111);
+    color:  bisque;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
+    font-size: x-large;
+}
+
+.delete{
+    width: 15%;
+    display: inline-flex;
     justify-content: center;
+    margin: auto;
+    margin-bottom: 5%;
+    background-color: blanchedalmond;
+    color: black;
+    border: none;
+    border-radius: 5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    padding: 2%;
 }
 
 .delete:hover{
-    background-color: cadetblue;
+    background-color: gray;
     cursor: pointer;
     transition:0.5s;
 }

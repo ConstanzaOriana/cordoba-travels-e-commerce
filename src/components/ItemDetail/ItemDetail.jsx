@@ -17,18 +17,18 @@ const ItemDetail = ({ item }) => {
     const quantity = getProductQuantity(item.id)
 
     return (
-        <div>
-            <img src={item.img} alt={item.title} />
+        <div className={estilos.divContainer}>
+            <img src={item.img} alt={item.title} className={estilos.img}/>
             <div>
-                <h2>{item.title}</h2>
+                <h2 className={estilos.title}>{item.title}</h2>
                 <p className={estilos.description}>
                     Experience one of the most beautiful places in all Cordoba!
                 </p>
-                <h3>${item.price}</h3>
+                <h3 className={estilos.price}>${item.price}</h3>
                 {cantidad === 0 ? (
-                    <ItemCount stock={item.stock} initial={quantity} onAdd={onAdd} />
+                    <ItemCount stock={item.stock} initial={quantity} onAdd={onAdd}/>
                 ) : (
-                    <Link to="/cart" className={estilos.cartButton}>Go to cart</Link>
+                    <Link to="/cart" className={estilos.cartButton}>Ride to cart!</Link>
                 )}
             
             </div>
